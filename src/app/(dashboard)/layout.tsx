@@ -1,5 +1,5 @@
-import Sidebar from "@/features/admin/components/Sidebar";
-import Footer from "@/features/admin/components/Footer";
+import Sidebar from "@/components/layout/Sidebar";
+import Footer from "@/components/layout/Footer";
 
 import RequireAdmin from "@/features/admin/components/RequireAdmin";
 
