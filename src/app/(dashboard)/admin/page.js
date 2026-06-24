@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import apiClient from "@/services/apiClient";
-import useAuth from "@/hooks/useAuth";
+import useAuth from "@/features/auth/hooks/useAuth";
 import StatsCard from "@/features/admin/components/StatsCard";
 import Topbar from "@/features/admin/components/Topbar";
 

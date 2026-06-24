@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import apiClient from "@/services/apiClient";
-import useAuth from '@/hooks/useAuth';
+import useAuth from '@/features/auth/hooks/useAuth';
 
 export default function Sidebar() {
   const router = useRouter();
