@@ -10,6 +10,8 @@ import ProductModal from "./ProductModal";
 
 import DeleteModal from "@/features/admin/components/DeleteModal";
 
+import { toast } from "react-hot-toast";
+
 export default function ProductsManagement(){
 
   const [open,setOpen] = useState(false);
@@ -98,11 +100,31 @@ const handleDelete = (product)=>{
 
 const handleConfirmDelete = async()=>{
 
-  await removeProduct(
-    deleteTarget.uuid
-  );
+  try{
 
-  setDeleteTarget(null);
+    await removeProduct(
+      deleteTarget.uuid
+    );
+
+    setDeleteTarget(null);
+
+    toast.success(
+      "Product deleted successfully"
+    );
+
+  }catch(error){
+
+    console.error(
+      "Delete product failed",
+      error
+    );
+
+    toast.error(
+      error.response?.data?.message ||
+      "Failed delete product"
+    );
+
+  }
 
 };
 
