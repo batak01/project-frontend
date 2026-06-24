@@ -2,7 +2,7 @@
 
 import {
   AuthProvider
-} from "@/context/AuthContext";
+} from "@/contexts/AuthContext";
 
 import {
   Toaster
